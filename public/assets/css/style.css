@@ -1,0 +1,160 @@
+body{
+    background-color: #1B2026;
+    font-family:'Finlandica', sans-serif;
+}
+.navbar-toggler-icon{
+    background-color: #1B2026;
+}
+.navbar-toggler-icon{
+    border-color:#F1B350;
+}
+.nav{
+    width:100%;
+}
+a{
+    text-decoration: none;
+}
+navbar-toggler{
+    border:none;
+}
+label{
+    color:#F1B350;
+}
+h3{
+    color:#F1B350;
+}
+.textVertical{
+    font-size: 50px;
+    color:#F1B350;
+    writing-mode: vertical-rl;
+    text-orientation:unset;
+    transform: rotate(-180deg);
+    margin-left: 0px;
+    margin-top:30px;
+    margin-bottom: 30px;
+
+}
+.emilien{ 
+    display:flex;
+    color: white;
+    margin-top: 30px;
+}
+.textDescription{
+    margin-top: 30px;
+    color: white;
+}
+.cote{
+    font-family: 'Satisfy', cursive;
+    font-size: 25px ;
+    color: white;
+}
+
+.requestEstimate, .cocktailPage{
+    background-color: #F1B350;
+    border-color: #F1B350;
+    border-radius: 3px;
+    height:50px;
+    margin-top: 100px !important;
+    margin-bottom: 100px;
+    justify-content: center;
+    display: block;
+    margin:auto;
+}
+
+.cardCocktail{
+    margin-top: 100px;
+    color: white;
+}
+.card-img-top{
+    border-radius: 3px;
+}
+
+.carousel{
+    margin-top: 30px;
+}
+
+/* .calendar{
+    margin-top: 60px;
+} */
+
+/* formulaire de contact */
+.contactForm{
+    margin-top: 60px;
+    color: white;
+}
+
+.titleContact{
+    color: #F1B350;
+}
+
+input{
+    border-color: #F1B350 !important;
+    color: #F1B350!important;
+    background-color: #1B2026 !important;
+    border-radius:3px;
+}
+
+.contactDetails{
+    color: white;
+    margin-top: 60px; 
+}
+.contact{
+    color:#F1B350;
+    display:flex;
+    justify-content: center;
+}
+.owner, .phoneNumber, .mailContact{
+    color:white;
+    font-size: large;
+    display:flex;
+    justify-content: center;
+}
+.message{
+    border-color: #F1B350;
+    background-color: #1B2026;
+    color: white;
+    border-radius: 3px;
+    height:200px;
+}
+
+.rgpdValidation{
+    margin-top:2%;
+    margin-bottom: 2%;
+}
+.submitForm{
+    margin-top: 30px;
+    border-radius: 3px;
+    border-color: #F1B350;
+    background-color: #F1B350;
+    color: #1B2026;
+    height:50px;
+}
+.imgPartner{
+border-color: #F1B350;
+border-radius: 400px;
+margin-bottom: 30px;
+margin-left: 30px;
+}
+.partnerTitle{
+    color: #F1B350;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+h1{
+    color: #F1B350;  
+}
+.connectTitle{
+    color: #F1B350; 
+}
+
+.personalInfo{
+    margin-top: 20px;
+}
+
+#cocktailBackground{
+    position: absolute;
+    left: 50%;
+    transform:translateX(-57%);
+    opacity: 0.2;
+}
