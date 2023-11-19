@@ -10,3 +10,9 @@ table{
     color:red;
 }
 
+textarea{
+    background-color: #1B2026 ;
+    border-color: #F1B350;
+    color: #F1B350;
+    border-radius:3px;
+}

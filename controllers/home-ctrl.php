@@ -4,6 +4,7 @@ require_once __DIR__ . '/../models/SliderPictures.php';
 
 try {
     $sliderPictures = Slider::getAll();
+
 } catch (\Throwable $th) {
     $error = $th->getMessage();
 

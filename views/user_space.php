@@ -44,8 +44,7 @@
                 <label for="passwordVerify">Confirmation mot de passe: </label>
                 <input class="form-control " type="password" id="passwordVerify" name="passwordVerify" placeholder="Entrez votre mot de passe" required>
             </div> -->
-            <button type="submit" class="signOut col-md-4 col-4 mt-5">Modifier</button>
-
+            <a class="updateBtn btn col-md-4 mt-5" href="/controllers/user_space_ctrl.php?action=update&id_user=<?= $userArray['id_users'] ?>">Modifier</a>
         </form>
     </div>
     <div class="container-fluid">

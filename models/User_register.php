@@ -170,29 +170,6 @@ class User_register
 
         return $user;
     }
-    // public static function get_userById($userId)
-    // {
-    //     try {
-    //         $pdo = Database::connect();
-    //         $sql = 'SELECT * FROM `users_register` WHERE `id_users` = :user_id LIMIT 1';
-    //         $stmt = $pdo->prepare($sql);
-    //         $stmt->bindValue(':user_id', $userId, PDO::PARAM_INT);
-    //         $stmt->execute();
-
-    //         // Fetch the user as an associative array
-    //         $user = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    //         return $user;
-    //     } catch (PDOException $e) {
-    //         // Handle database-related exceptions
-    //         // Log the error, redirect the user, or display an error message
-    //         throw new Exception("Error fetching user by ID: " . $e->getMessage());
-    //     } catch (Exception $e) {
-    //         // Handle other exceptions
-    //         // Log the error, redirect the user, or display an error message
-    //         throw new Exception("Error fetching user by ID: " . $e->getMessage());
-    //     }
-    // }
 
     public static function get($id_users)
     {

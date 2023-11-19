@@ -1,11 +1,11 @@
 <!-- présentation -->
 <main class="container-fluid">
     <div class="row WhoIAm">
-        <img class="emilienBar p-0 img-fluid" src="/public/assets/img/Emilien.png" alt="Les sens du bar">
+        <img class="emilienBar p-0 img-fluid" src="/public/assets/img/photo_header.png" alt="Les sens du bar">
     </div>
 
     <div class="row justify-content-center">
-        <h2 class="textVertical col-md-2 col-2 mt-5">VOTRE BARMAN</h2>
+        <h1 class="textVertical col-md-2 col-2 mt-5">VOTRE BARMAN</h1>
         <div class="textDescription col-md-8 col-8 ">
             <h2 class="emilien ">Emilien</h2>
             <h3 class=" ">Diplômé de l'European Bartender School</h3>
@@ -21,66 +21,66 @@
                 Ma philosophie : je ne fais pas des boissons mais j'invente des moments de rêve et de détente !
             </p>
         </div>
-        <p class="cote col-md-10 text-center">Alors, vous prendrez bien un dernier verre ?</p>
+        <h3 class="cote col-md-10 text-center">Alors, vous prendrez bien un dernier verre ?</h3>
     </div>
+    
 </main>
 <!-- fin présentation -->
 <!-- caroussel alimenté par la base de données -->
-<div class="container-fluid">
-    <div class="row justify-content-evenly">
-        <div class="col-md-8">
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-touch="false">
-                <div class="carousel-inner">
+<section class="container-fluid">
+    <div class="row justify-content-center ">
+        <div id="carouselExampleAutoplaying" class="carousel slide col-md-6" data-bs-ride="carousel">
+            <div class="carousel-inner" >
+                <?php
+                $firstItem = true; // Ajout d'une variable pour suivre le premier élément
 
-                    <?php foreach ($sliderPictures as $key => $sliderPicture) { ?>
-                        <div class="carousel-item <?php echo ($key === 0) ? 'active' : ''; ?>">
-                            <img src="/public/uploads/slider/<?= $sliderPicture->pictures_name ?>" class="d-block w-100" alt="...">
-                        </div>
-                    <?php } ?>
-
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                foreach ($sliderPictures as $sliderPicture) {
+                ?>
+                    <div class="carousel-item <?php echo $firstItem ? 'active' : ''; ?>">
+                        <img src="/public/uploads/slider/<?= $sliderPicture->pictures_name ?>" class="d-block w-100" alt="...">
+                    </div>
+                <?php
+                    $firstItem = false; // Marquer le premier élément comme traité après la première itération
+                }
+                ?>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </div>
-    <button type="button" class="requestEstimate col-md-4" onclick="window.location.href='/controllers/devis_ctrl.php';">demander un devis</button>
-</div>
-
-
-
+</section>
 <!-- fin caroussel -->
 <!-- cards cocktail -->
 <section class="container-fluid">
     <div class="row justify-content-evenly">
         <div class="cardCocktail col-md-4" style="width: 18rem;">
-            <img src="/public/assets/img/spritz.jpg" class="card-img-top" alt="...">
+            <img src="/public/assets/img/spritz.jpg" class="card-img-top mb-3" alt="Spritz">
             <div class="card-body">
-                <h5 class="card-title">Spritz</h5>
+                <h5 class="card-title mb-3">Spritz</h5>
                 <p class="card-text">C’est enfin Juin ! Et qui dit été qui approche, dit Spritz ! Cette boisson
                     typiquement italienne est l'arme secrète de tout barman pour rafraîchir les longues soirées
                     d'été.</p>
             </div>
         </div>
         <div class="cardCocktail col-md-4" style="width: 18rem;">
-            <img src="/public/assets/img/maï_taï.png" class="card-img-top" alt="...">
+            <img src="/public/assets/img/maï_taï.png" class="card-img-top mb-3" alt="maï taï">
             <div class="card-body">
-                <h5 class="card-title">Maï taï</h5>
+                <h5 class="card-title mb-3">Maï taï</h5>
                 <p class="card-text">Qui dit mois de mai, dit évidemment Maï Taï !
                     Avec ses saveurs exotiques de rhum, de jus de citron vert, de sirop d'orgeat et de triple sec,
                     le Maï Taï est le cocktail parfait pour vous sentir en vacances.
             </div>
         </div>
         <div class="cardCocktail col-md-4" style="width: 18rem;">
-            <img src="/public/assets/img/bunny_Mary.png" class="card-img-top" alt="...">
+            <img src="/public/assets/img/bunny_Mary.png" class="card-img-top mb-3" alt="bunny mary">
             <div class="card-body">
-                <h5 class="card-title">Bunny mary</h5>
+                <h5 class="card-title mb-3">Bunny mary</h5>
                 <p class="card-text">Et si vous surpreniez vos invités avec un cocktail à la fois ludique, savoureux
                     et de saison ? Inspiré du Bloody Mary, le Bunny Mary offre une variante à la carotte
                     parfaitement d’actualité pour un brunch ou un repas de Pâques.</p>

@@ -1,10 +1,10 @@
 <?php
-
-
 require_once __DIR__ . ('/../../models/SliderPictures.php');
 require_once __DIR__ . ('/../../config/const.php');
 require_once __DIR__ . ('/../../config/regex.php');
 
+
+$newnamefile = '';
     try {
 
         $errors = [];
@@ -35,14 +35,9 @@ require_once __DIR__ . ('/../../config/regex.php');
         }
     if (empty($errors)) {
         $newPicture = new Slider();
-
-
         $newPicture->setpictures_name($newnamefile);
-
-
         // Insérer dans la base de données
         $saved = $newPicture->insert();
-
 
         if ($saved) {
             $message = 'Photo enregistré avec succès';
@@ -52,7 +47,6 @@ require_once __DIR__ . ('/../../config/regex.php');
     }
 } catch (\Throwable $th) {
     $error = $th->getMessage();
-    var_dump($th);
     die;
     include __DIR__ . '/../../views/dashboard/templates/error.php';
 }

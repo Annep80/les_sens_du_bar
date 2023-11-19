@@ -42,16 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!lastname || !firstname || !birthday || !phoneNumber || !mailInfo || !adress || !zipcode || !city || !password || !passwordVerify) {
             validationMessage += 'Tous les champs sont obligatoires.\n';
         }
-
-        if (validationMessage === '') {
-            // Hashage du mot de passe (à des fins de démonstration seulement, ne faites pas cela côté client dans un environnement de production)
-            const hashedPassword = sha256(password);
-            console.log('Mot de passe haché:', hashedPassword);
-
-            validationMessage = 'Formulaire valide !';
-
-        }
-
+        
         document.getElementById('validationMessage').innerHTML = validationMessage;
     }
 

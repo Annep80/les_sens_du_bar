@@ -10,5 +10,5 @@ define('EMAIL_REGEX',"^[a-zA-Z0-9._-]{1,64}@([a-zA-Z0-9-]{2,252}\.[a-zA-Z.]{2,6}
 define('PHONE_REGEX',"^(\+33\s[1-9]{8})|(0[1-9]\s{8})$");
 define('ZIPCODE_REGEX',"^\d{5}$");
 define('CITY_REGEX',"^[A-Za-zÀ-ÿ\s\-']+$");
-
-
+define('TEXTAREA_REGEX',"^[a-zA-Z0-9 \-., éèêëîïôöùûüàäâá]+$");
+define('NAME_REGEX',"^[a-zA-Z0-9 \_-éèêëîïôöùûüàäâá]+$");
