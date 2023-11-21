@@ -4,7 +4,7 @@ require_once __DIR__ . '/../../models/SliderPictures.php';
 try {
 
     $sliderPictures = Slider::getAll();
-    $delete = intval(filter_input(INPUT_GET, 'delete', FILTER_SANITIZE_NUMBER_INT));
+    // $delete = intval(filter_input(INPUT_GET, 'delete', FILTER_SANITIZE_NUMBER_INT));
     
     
 } catch (\Throwable $th) {

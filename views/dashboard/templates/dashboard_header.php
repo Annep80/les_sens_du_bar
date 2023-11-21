@@ -18,7 +18,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-dark bg-dark sticky-top">
+        <nav class="navbar navbar-dark  sticky-top">
             <div class="container-fluid">
                 <div class="row nav justify-content-evenly">
                     <a class="col-md-2 col-7" href="/controllers/home-ctrl.php"><img src="/public/assets/img/logo_les_sens_du_bar.png" alt="logo les sens du bar"></a>
@@ -32,23 +32,34 @@
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
+                        <a class="nav-link active" aria-current="page" href="/controllers/dashboard/dashboard_home_ctrl.php">Accueil dashboard</a>
+                        <h5 class="mt-5">Carrousel</h5>
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
                             <li class="nav-item">
-                                <a class="nav-link active" href="/controllers/dashboard/add_pictures_ctrl.php">Carrousel - ajouter une image</a>
+                                <a class="nav-link active" href="/controllers/dashboard/add_pictures_ctrl.php">Ajouter une image</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/controllers/dashboard/list_pictures_slider_ctrl.php">Carrousel - Liste des images </a>
+                                <a class="nav-link active" aria-current="page" href="/controllers/dashboard/list_pictures_slider_ctrl.php">Liste des images </a>
                             </li>
+
+                            
+                        </ul>
+                        <h5 class="mt-5">Cocktails</h5>
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="/controllers/dashboard/add_cocktail_ctrl.php">Cocktails- ajouter un cocktail</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/controllers/dashboard/dashboard_home_ctrl.php">demande de devis</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/controllers/dashboard/dashboard_home_ctrl.php">dashboard</a>
+                                <a class="nav-link active" aria-current="page" href="/controllers/dashboard/list_cocktail_ctrl.php">Cocktails- liste des cocktails</a>
                             </li>
 
+                        </ul>
+                        <h5 class="mt-5">Contact</h5>
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/controllers/dashboard/list_contact_ctrl.php">Liste des demandes</a>
+                            </li>
                         </ul>
                     </div>
                 </div>

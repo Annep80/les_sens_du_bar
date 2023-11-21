@@ -20,7 +20,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-dark bg-dark sticky-top">
+        <nav class="navbar navbar-dark  sticky-top">
             <div class="container-fluid">
                 <div class="row nav justify-content-evenly">
                     <a class="col-md-2 col-7" href="/controllers/home-ctrl.php"><img src="/public/assets/img/logo_les_sens_du_bar.png" alt="logo les sens du bar"></a>

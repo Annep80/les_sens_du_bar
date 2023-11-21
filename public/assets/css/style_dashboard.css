@@ -3,8 +3,8 @@
     color:#F1B350;
 }
 table{
-    color: antiquewhite ;
-
+    border-color: #F1B350 !important;
+    
 }
 .validationMessage{
     color:red;

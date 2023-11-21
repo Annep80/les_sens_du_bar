@@ -12,7 +12,7 @@
             <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/les.sens.du.bar/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==" target="blank" role="button"><img src="/public/assets/img/icons8-instagram-old-50.png" alt="logo instagram"></a>
 
             <!-- Linkedin -->
-            <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/annepiau/" role="button"><img src="/public/assets/img/icons8-linkedin-50 (1).png" alt="logo linkedin"></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/company/les-sens-du-bar/" role="button"><img src="/public/assets/img/icons8-linkedin-50 (1).png" alt="logo linkedin"></a>
 
             <!-- Github -->
             <!-- <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a> -->
@@ -21,7 +21,7 @@
         <!-- Section: Links -->
         <section class="">
             <!--Grid row-->
-            <div class="row">
+            <div class="row justify-content-center ">
                 <!--Grid column-->
                 <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
                     <ul class="list-unstyled mb-0">
@@ -37,23 +37,6 @@
                     </ul>
                 </div>
                 <!--Grid column-->
-
-                <!--Grid column-->
-                <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="#!" class="">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="">Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="">Link 3</a>
-                        </li>
-                    </ul>
-                </div>
-                <!--Grid column-->
-
             </div>
             <!--Grid row-->
         </section>
@@ -63,8 +46,7 @@
 
     <!-- Copyright -->
     <div class="text-center p-3">
-        © 2023 Copyright:
-        <a class="" href="https://mdbootstrap.com/">Anne Piau</a>
+    L'abus d'alcool est dangereux pour la santé, à consommer avec modération. © 2023 Copyright: <a href="https://www.linkedin.com/in/annepiau/">Anne Piau</a>
     </div>
     <!-- Copyright -->
 </footer>
