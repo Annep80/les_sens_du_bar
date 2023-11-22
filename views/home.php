@@ -7,9 +7,9 @@
     <div class="row justify-content-center">
         <h1 class="textVertical col-md-2 col-2 mt-5">VOTRE BARMAN</h1>
         <div class="textDescription col-md-8 col-8 ">
-            <h2 class="emilien ">Emilien</h2>
-            <h3 class=" ">Diplômé de l'European Bartender School</h3>
-            <h4 class=" ">Les Sens du Bar, l'histoire d'une passion!</h4>
+            <h2 class="emilien mb-4 ">Emilien</h2>
+            <h3 class=" mb-4">Diplômé de l'European Bartender School</h3>
+            <h4 class=" mb-3">Les Sens du Bar, l'histoire d'une passion!</h4>
             <p class=" ">Sourire, courage, créativité, sens du service sont les ingrédients
                 nécessaires pour réussir derrière un bar. Après plusieurs expériences en
                 hôtellerie, restauration et au fil des rencontres, j'ai voulu me tourner vers la prestation
@@ -23,7 +23,7 @@
         </div>
         <h3 class="cote col-md-10 text-center">Alors, vous prendrez bien un dernier verre ?</h3>
 
-        <button type="button" class=" btn cocktailPage col-md-4" onclick="window.location.href='/controllers/contact_page_ctrl.php';">Contactez-nous!</button>
+        <button type="button" class=" btn cocktailPage col-md-4 mb-5" onclick="window.location.href='/controllers/contact_page_ctrl.php';">Contactez-nous!</button>
     </div>
     
 </main>

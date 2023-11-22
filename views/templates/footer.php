@@ -12,7 +12,7 @@
             <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/les.sens.du.bar/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==" target="blank" role="button"><img src="/public/assets/img/icons8-instagram-old-50.png" alt="logo instagram"></a>
 
             <!-- Linkedin -->
-            <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/company/les-sens-du-bar/" role="button"><img src="/public/assets/img/icons8-linkedin-50 (1).png" alt="logo linkedin"></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/company/les-sens-du-bar/" target="blank" role="button"><img src="/public/assets/img/icons8-linkedin-50 (1).png" alt="logo linkedin"></a>
 
             <!-- Github -->
             <!-- <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a> -->
@@ -46,7 +46,7 @@
 
     <!-- Copyright -->
     <div class="text-center p-3">
-    L'abus d'alcool est dangereux pour la santé, à consommer avec modération. © 2023 Copyright: <a href="https://www.linkedin.com/in/annepiau/">Anne Piau</a>
+    L'abus d'alcool est dangereux pour la santé, à consommer avec modération. © 2023 Copyright: <a target="blank" href="https://www.linkedin.com/in/annepiau/">Anne Piau</a>
     </div>
     <!-- Copyright -->
 </footer>
