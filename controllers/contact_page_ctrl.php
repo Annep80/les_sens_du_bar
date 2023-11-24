@@ -3,7 +3,8 @@
 require_once __DIR__ . '/../models/Contact.php';
 // Démarrer la session
 session_start();
-
+$title = 'Contactez-nous - les sens du bar';
+$metaDescription = 'Les sens du bar est un service de barman itinérant. Contactez-nous pour obtenir plus de renseignements.';
 try {
     // Initialisation du tableau des erreurs
     $errors = [];

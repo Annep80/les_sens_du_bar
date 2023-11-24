@@ -3,7 +3,7 @@
     <div class="container-fluid">
 
         <form method="post" enctype="multipart/form-data" action="" class="row personalInfo justify-content-center">
-            <h3 class="text-center">Formulaire d'inscription</h3>
+            <h1 class="text-center">Formulaire d'inscription</h1>
             <div class="mt-5 col-12 col-md-5">
                 <label for="lastname">Nom: *</label>
                 <input type="text" class="form-control" id="lastname" name="lastname" maxlength="30" pattern="<?= LASTNAME_REGEX ?>" autocomplete="familly-name">

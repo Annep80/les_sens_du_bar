@@ -76,7 +76,7 @@
                 <h5 class="card-title mb-3">Maï taï</h5>
                 <p class="card-text">Qui dit mois de mai, dit évidemment Maï Taï !
                     Avec ses saveurs exotiques de rhum, de jus de citron vert, de sirop d'orgeat et de triple sec,
-                    le Maï Taï est le cocktail parfait pour vous sentir en vacances.
+                    le Maï Taï est le cocktail parfait pour vous sentir en vacances.</p>
             </div>
         </div>
         <div class="cardCocktail col-md-4" style="width: 18rem;">

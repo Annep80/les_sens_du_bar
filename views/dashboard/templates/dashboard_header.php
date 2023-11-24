@@ -39,9 +39,11 @@
                     </div>
                     <div class="offcanvas-body">
                         <a class="nav-link active" aria-current="page" href="/controllers/dashboard/dashboard_home_ctrl.php">Accueil dashboard</a>
+                        <a class="nav-link active" aria-current="page" href="/controllers/home-ctrl.php">Accueil du site</a>
+
                         <h5 class="mt-5">Carrousel</h5>
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-
+                        
                             <li class="nav-item">
                                 <a class="nav-link active" href="/controllers/dashboard/add_pictures_ctrl.php">Ajouter une image</a>
                             </li>

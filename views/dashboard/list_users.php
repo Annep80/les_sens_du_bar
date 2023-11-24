@@ -31,7 +31,7 @@
 
                             <td class=" bg-transparent text-white"><?= $user->lastname ?></td>
                             <td class=" bg-transparent text-white"><?= $user->firstname ?></td>
-                            <td class=" bg-transparent text-white"><?= $user->birthday ?></td>
+                            <td class=" bg-transparent text-white"><?= date('d/m/Y', strtotime($user->birthday)) ?></td>
                             <td class=" bg-transparent text-white"><?= $user->phone ?></td>
                             <td class=" bg-transparent text-white"><?= $user->mail ?></td>
                             <td class=" bg-transparent text-white"><?= $user->address ?></td>

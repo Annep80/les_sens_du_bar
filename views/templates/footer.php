@@ -46,7 +46,7 @@
 
     <!-- Copyright -->
     <div class="text-center p-3">
-    L'abus d'alcool est dangereux pour la santé, à consommer avec modération. © 2023 Copyright: <a target="blank" href="https://www.linkedin.com/in/annepiau/">Anne Piau</a>
+    L'abus d'alcool est dangereux pour la santé, à consommer avec modération. © 2023 Copyright: <a target="blank" href="https://www.linkedin.com/in/annepiau/">Anne Piau <img src="/public/assets/img/licorne-32.png" alt=""></a>
     </div>
     <!-- Copyright -->
 </footer>

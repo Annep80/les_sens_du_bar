@@ -1,8 +1,12 @@
 <?php
-// Démarrer la session
-session_start();
 // Inclure la classe User_register
 require_once __DIR__ . '/../models/User_register.php';
+// Démarrer la session
+session_start();
+$title = 'Connexion - les sens du bar';
+$metaDescription = 'Les sens du bar est un service de barman itinérant. 
+                    Connectez-vous pour acceder à vos informations personnelles et devis';
+
 
 try {
     // Vérifier si la méthode HTTP utilisée est POST

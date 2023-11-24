@@ -1,7 +1,7 @@
 <main>
     <form method="post" enctype="multipart/form-data"  class="container-fluid" >
         <div class="row text-center mt-5">
-            <h2 class="connectTitle">Connexion</h2>
+            <h1 class="connectTitle">Connexion</h1>
         </div>
         <div class="row text-center">
             <div class=" mt-5">

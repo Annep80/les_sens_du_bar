@@ -3,7 +3,9 @@
 require_once __DIR__ . ('/../models/User_register.php');
 require_once __DIR__ . ('/../config/const.php');
 require_once __DIR__ . ('/../config/regex.php');
-
+$title = 'Inscription - les sens du bar';
+$metaDescription = 'Les sens du bar est un service de barman itinérant. 
+                    Inscrivez-vous pour demander un devis personnalisé';
 try {
     // Initialiser le tableau des erreurs
     $errors = [];

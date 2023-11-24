@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Les sens du bar est un service de barman itinérant. Séminaires, inauguration, salon, mariages et autre évènements familliaux, votre barman itinérant saura sublimer tout type d'évenement grace à ses cocktails originaux.">
+    <meta name="description" content="<?= $metaDescription ?>">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="/public/assets/css/style.css">
@@ -15,7 +15,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Finlandica&family=Satisfy&display=swap" rel="stylesheet">
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
-    <title>Les sens du bar - Votre barman à domicile</title>
+    <title><?= $title ?></title>
 </head>
 
 <body>

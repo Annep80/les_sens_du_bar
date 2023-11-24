@@ -5,7 +5,8 @@ require_once __DIR__ . '/../models/Contact.php';
 require_once __DIR__ . '/../config/regex.php';
 // Démarrer la session
 session_start();
-
+$title = 'Les sens du bar - votre barman à domicile';
+$metaDescription = 'Les sens du bar est un service de barman itinérant. Séminaires, inauguration, salon, mariages et autre évènements familliaux, votre barman itinérant saura sublimer tout type d\'évenement grace à ses cocktails originaux.';
 try {
     // Récupérer toutes les images du slider
     $sliderPictures = Slider::getAll();

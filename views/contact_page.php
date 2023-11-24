@@ -1,6 +1,6 @@
 <main class="container-fluid">
     <form method="post" id="contactForm" class="contactForm row justify-content-evenly  m-0" novalidate>
-        <h4 class="titleContact text-center">Contacter Emilien:</h4>
+        <h1 class="titleContact text-center">Contacter Emilien:</h1>
         <label class="col-md-7 col-10" for="lastname">Nom: *</label>
         <input class=" inputForm col-md-7 col-10" name="lastname" id="lastname" type="text" placeholder="Nom" >
         <span class=" alert-danger col-md-7 col-10"><?= $errors['lastname'] ?? '' ?></span>
