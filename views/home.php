@@ -8,12 +8,12 @@
         <h1 class="textVertical col-md-2 col-2 mt-5">VOTRE BARMAN</h1>
         <div class="textDescription col-md-8 col-8 ">
             <h2 class="emilien mb-4 ">Emilien</h2>
-            <h3 class=" mb-4">Diplômé de l'European Bartender School</h3>
+            <h3 class=" mb-4">Votre barman à domicile</h3>
             <h4 class=" mb-3">Les Sens du Bar, l'histoire d'une passion!</h4>
             <p class=" ">Sourire, courage, créativité, sens du service sont les ingrédients
                 nécessaires pour réussir derrière un bar. Après plusieurs expériences en
                 hôtellerie, restauration et au fil des rencontres, j'ai voulu me tourner vers la prestation
-                événementielle pour régaler les yeux et les papilles Faire plaisir, créer des souvenirs, marquer
+                événementielle pour régaler les yeux et les papilles. Faire plaisir, créer des souvenirs, marquer
                 les
                 esprits d'une rencontre familiale ou d'un événement professionnel sont des réelles motivations
                 au
@@ -23,16 +23,16 @@
         </div>
         <h3 class="cote col-md-10 text-center">Alors, vous prendrez bien un dernier verre ?</h3>
 
-        <button type="button" class=" btn cocktailPage col-md-4 mb-5" onclick="window.location.href='/controllers/contact_page_ctrl.php';">Contactez-nous!</button>
+        <button type="button" class=" btn cocktailPage col-md-4 col-6 mb-5" onclick="window.location.href='/controllers/contact_page_ctrl.php';">Contactez-nous!</button>
     </div>
-    
+
 </main>
 <!-- fin présentation -->
 <!-- caroussel alimenté par la base de données -->
 <section class="container-fluid">
     <div class="row justify-content-center ">
         <div id="carouselExampleAutoplaying" class="carousel slide col-md-6" data-bs-ride="carousel">
-            <div class="carousel-inner" >
+            <div class="carousel-inner">
                 <?php
                 $firstItem = true; // Ajout d'une variable pour suivre le premier élément
 
@@ -89,42 +89,46 @@
             </div>
         </div>
     </div>
-    <button type="button" class=" btn cocktailPage col-md-4" onclick="window.location.href='/controllers/cocktail-ctrl.php';">cocktails du mois</button>
+    <button type="button" class=" btn cocktailPage col-6 col-md-4" onclick="window.location.href='/controllers/cocktail-ctrl.php';">cocktails du mois</button>
 </section>
 <!-- fin cards cocktail -->
 <!-- disponibilités et contact -->
 <section class="container-fluid">
-    <div class="row justify-content-evenly">
-
-    </div>
-
 
     <form method="post" id="contactForm" class="contactForm row justify-content-evenly mb-5">
-    <h4 class="titleContact text-center">Contacter Emilien:</h4>
 
-    <label class="col-md-7 col-10" for="lastname">Nom: *</label>
-    <input class="inputForm col-md-7 col-10" pattern="<?= LASTNAME_REGEX ?>" name="lastname" id="lastname" type="text" placeholder="Nom" autocomplete="family-name" required>
+        <h4 class="titleContact">Contacter Emilien:</h4>
 
-    <label class="inputForm col-md-7 col-10" for="firstname">Prénom: *</label>
-    <input class="inputForm col-md-7 col-10" pattern="<?=FIRSTNAME_REGEX ?>" name="firstname" id="firstname" type="text" placeholder="Prénom" autocomplete="given-name"required>
+        <label class="inputForm col-md-7 col-10" for="lastname">Nom: *</label>
+        <input class="inputForm col-md-7 col-10" pattern="<?= LASTNAME_REGEX ?>" name="lastname" id="lastname" type="text" placeholder="Nom" autocomplete="family-name">
+        <span class=" col-md-7 col-10"><?= $errors['lastname'] ?? ''  ?></span>
 
-    <label class="inputForm col-md-7 col-10" for="phone">Numéro de téléphone: *</label>
-    <input class="inputForm col-md-7 col-10" pattern="<?=PHONE_REGEX ?>" name="phone" id="phone" type="tel" placeholder="Numéro de téléphone" autocomplete="tel" required>
+        <label class="inputForm col-md-7 col-10" for="firstname">Prénom: *</label>
+        <input class="inputForm col-md-7 col-10" pattern="<?= FIRSTNAME_REGEX ?>" name="firstname" id="firstname" type="text" placeholder="Prénom" autocomplete="given-name">
+        <span class=" col-md-7 col-10"><?= $errors['firstname'] ?? ''  ?></span>
 
-    <label class="inputForm col-md-7 col-10" for="email">Adresse mail: *</label>
-    <input class="inputForm col-md-7 col-10" pattern="<?=EMAIL_REGEX ?>" name="email" id="email" type="email" placeholder="Adresse mail" autocomplete="email" required>
+        <label class="inputForm col-md-7 col-10" for="phone">Numéro de téléphone: *</label>
+        <input class="inputForm col-md-7 col-10" pattern="<?= PHONE_REGEX ?>" name="phone" id="phone" type="tel" placeholder="Numéro de téléphone" autocomplete="tel">
+        <span class=" col-md-7 col-10"><?= $errors['phone'] ?? '' ?></span>
 
-    <label class="inputForm col-md-7 col-10" for="message">Votre demande: *</label>
-    <textarea class="message col-md-7 col-10" pattern="<?=TEXTAREA_REGEX ?>" name="message" id="message" placeholder="Votre message" required></textarea>
+        <label class="inputForm col-md-7 col-10" for="email">Adresse mail: *</label>
+        <input class="inputForm col-md-7 col-10" pattern="<?= EMAIL_REGEX ?>" name="email" id="email" type="email" placeholder="Adresse mail" autocomplete="email">
+        <span class=" col-md-7 col-10"><?= $errors['email'] ?? '' ?></span>
 
-    <div class="rgpdValidation text-center">
-        <input class="me-2" id="textRgpd" type="checkbox" required>
-        <label class="textRgpd" for="textRgpd">J'autorise Les sens du bar à conserver mes données personnelles
-            transmises via ce formulaire.</label>
-    </div>
+        <label class="inputForm col-md-7 col-10" for="message">Votre demande: *</label>
+        <textarea class="message col-md-7 col-10" pattern="<?= TEXTAREA_REGEX ?>" name="message" id="message" placeholder="Votre message"></textarea>
+        <span class=" col-md-7 col-10"><?= $errors['message'] ?? '' ?></span>
 
-    <button type="submit" class="submitForm col-md-4 col-4" onclick="validateForm()">Envoyer</button>
-</form>
+        <div class="rgpdValidation text-center">
+            <input class="me-2" id="textRgpd" type="checkbox">
+            <label class="textRgpd" for="textRgpd">J'autorise Les sens du bar à conserver mes données personnelles
+                transmises via ce formulaire.</label>
+        </div>
+
+        <button type="submit" class="submitForm col-md-4 col-6" onclick="validateForm()">Envoyer</button>
+
+    </form>
+
 </section>
 <section class="container-fluid">
     <div class="contactDetails row">
@@ -152,5 +156,3 @@
     </div>
 </section>
 <!-- fin références -->
-
-<script src="/public/assets/js/script_contact.js"></script>

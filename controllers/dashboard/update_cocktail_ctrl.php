@@ -1,11 +1,20 @@
 <?php
+// Inclure les fichiers nécessaires
 require_once __DIR__ . '/../../config/regex.php';
 require_once __DIR__ . '/../../models/Cocktail.php';
 
+// Démarrer la session
+session_start();
+// Vérifier si l'utilisateur a le rôle requis (rôle avec l'identifiant 1) pour accéder
+if ($_SESSION['users_register']['id_roles'] != 1) {
+    // Rediriger vers la page d'accueil si l'utilisateur n'a pas le rôle requis
+    header('location: /../../controllers/home-ctrl.php');
+}
 
 try {
     // Récupération du paramètre d'URL correspondant à l'id de la catégorie cliquée
     $id_cocktail = intval(filter_input(INPUT_GET, 'id_cocktail', FILTER_SANITIZE_NUMBER_INT));
+    // Récupération des données du cocktail à mettre à jour
     $cocktails = Cocktail::get($id_cocktail);
 
 
@@ -13,11 +22,11 @@ try {
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Récupération, nettoyage et validation des données
-        
+
         $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
         $ingredients = filter_input(INPUT_POST, 'ingredients', FILTER_SANITIZE_SPECIAL_CHARS);
         $stages = filter_input(INPUT_POST, 'stages', FILTER_SANITIZE_SPECIAL_CHARS);
-
+        // Validation de l'existence du cocktail avec l'ID spécifié
         if (!$id_cocktail) {
             $error['id_cocktail'] = 'Ce champ est obligatoire!';
         } else {
@@ -25,7 +34,7 @@ try {
                 $error['id_cocktail'] = 'Ce cocktail n\'existe pas!';
             }
         }
-
+        // Validation du champ "name"
         if (!$name) {
             $error['name'] = 'Ce champ est obligatoire!';
         } else {
@@ -34,7 +43,7 @@ try {
                 $error['name'] = 'Cette valeur n\'est pas correcte';
             }
         }
-
+        // Validation du champ "ingredients"
         if (!$ingredients) {
             $error['ingredients'] = 'Ce champ est obligatoire!';
         } else {
@@ -43,7 +52,7 @@ try {
                 $error['ingredients'] = 'Cette valeur n\'est pas correcte';
             }
         }
-
+        // Validation du champ "stages"
         if (!$stages) {
             $error['stages'] = 'Ce champ est obligatoire!';
         } else {
@@ -105,6 +114,7 @@ try {
         }
     }
 } catch (\Throwable $th) {
+    // Gérer les erreurs générales
     $error = $th->getMessage();
     include __DIR__ . '/../../views/dashboard/templates/dashboard_header.php';
     include __DIR__ . '/../../views/dashboard/templates/error.php';

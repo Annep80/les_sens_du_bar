@@ -3,30 +3,19 @@ body{
     font-family:'Finlandica', sans-serif;
 }
 
-
-
 /* style navbar */
-.navbar-toggler-icon{
-    background-color: #1B2026!important;
-}
-.navbar-toggler-icon{
-    border-color:#F1B350;
-}
-/* Déplace le logo à gauche de la navbar */
-.navbar img {
-    margin-right: auto;
-}
-
-/* Déplace le menu hamburger à droite de la navbar */
-.navbar-toggler {
-    margin-left: auto;
-}
 .nav{
     width:100%;
+}
+.btnClose{
+    background: transparent;
+    border:none;
 }
 navbar-toggler{
     border:none;
 }
+
+
 /* retire le style des liens, attribut une autre couleur */
 a{
     text-decoration: none;
@@ -95,9 +84,6 @@ h3{
 
 
 
-
-
-
 /* style cards cocktail */
 .cardCocktail{
     margin-top: 100px;
@@ -127,6 +113,8 @@ span{
 }
 
 
+/* formulaire inscription */
+
 
 
 
@@ -139,6 +127,7 @@ span{
 
 .titleContact, .linkSignUp{
     color: #F1B350;
+    text-align: center;
 }
 
 input{
@@ -215,6 +204,9 @@ h1{
     background-color: #1B2026;
     color:grey;
     border-color: #F1B350;
+}
+.welcomeTitle{
+    color: #F1B350;
 }
 
 

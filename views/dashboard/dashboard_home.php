@@ -25,6 +25,12 @@
                     <a class="mt-3 mb-2" href="/controllers/dashboard/list_contact_ctrl.php">Liste des demandes</a>
                 </div>
             </div>
+            <div class="col-md-4 col-12">
+                <div class="row">
+                    <h2 class="dashboardTitle mt-5 mb-5">Utilisateurs</h2>
+                    <a class="mt-3 mb-2" href="/controllers/dashboard/list_users_ctrl.php">Liste des utilisateurs</a>
+                </div>
+            </div>
         </div>
     </div>
 

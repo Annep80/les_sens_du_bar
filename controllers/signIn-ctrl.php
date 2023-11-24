@@ -1,55 +1,61 @@
 <?php
+// Démarrer la session
 session_start();
-
+// Inclure la classe User_register
 require_once __DIR__ . '/../models/User_register.php';
 
 try {
+    // Vérifier si la méthode HTTP utilisée est POST
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        // Filtrer et récupérer les données du formulaire
         $datas = filter_input_array(INPUT_POST, [
             "mail" => FILTER_SANITIZE_EMAIL,
             "password" => FILTER_DEFAULT
         ]);
+        // Initialiser le tableau des erreurs
         $errors = [];
-
+        // Vérifier si des erreurs existent
         if (empty($errors)) {
-            // Use a prepared statement to retrieve the user by email
+            // Utiliser une requête préparée pour récupérer l'utilisateur par son adresse e-mail
             $userData = User_register::get_userByEmail($datas["mail"]);
 
 
             try {
-                // Check if a user was found
+                // Vérifier si un utilisateur a été trouvé
                 if (!$userData || !is_array($userData)) {
                     throw new Exception("Échec d'authentification - Adresse mail introuvable", 1);
                 }
 
-                // Check if 'id_users' key exists in the array
+                // Vérifier si la clé 'id_users' existe dans le tableau
                 if (!array_key_exists('id_users', $userData)) {
                     throw new Exception("Échec d'authentification - Données utilisateur invalides", 3);
                 }
 
-                // Use password_verify to check the password
+                // Utiliser password_verify pour vérifier le mot de passe
                 $isOk = password_verify($datas["password"], $userData['password']);
 
                 if (!$isOk) {
                     throw new Exception("Échec d'authentification - Mot de passe incorrect", 2);
                 }
+                // Supprimer le champ 'password' pour des raisons de sécurité
                 unset($user->password);
-                // Use a consistent session variable key
+                // Utiliser une clé de session cohérente
                 $_SESSION['users_register'] = $userData;
-                // Redirect to user space after successful login
+                // Rediriger vers l'espace utilisateur après une connexion réussie
                 header('location: /controllers/user_space_ctrl.php');
                 die;
             } catch (Exception $e) {
+                // Ajouter l'erreur liée à l'authentification au tableau des erreurs
                 $errors["mail"] = $e->getMessage();
             }
         }
     }
 } catch (Throwable $th) {
-    // Log unexpected error
+    // Enregistrer une erreur imprévue
     $error = $th->getMessage();
-    
 
-    // Display a generic error message to the user
+
+    // Afficher un message d'erreur générique à l'utilisateur
     $errors['user_login'] = 'Une erreur s\'est produite lors de la connexion. Veuillez réessayer plus tard.';
 }
 

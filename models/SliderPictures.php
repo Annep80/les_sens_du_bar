@@ -13,11 +13,6 @@ class Slider
     {
         return $this->id_slider;
     }
-    /**
-     * @param int $id_slider
-     * 
-     * @return [type]
-     */
     public function setId_slider(int $id_slider)
     {
         $this->id_slider = $id_slider;
@@ -31,17 +26,14 @@ class Slider
     {
         return $this->pictures_name;
     }
-
-    /**
-     * @param string $pictures_name
-     * 
-     * @return [type]
-     */
     public function setpictures_name(string $pictures_name)
     {
         $this->pictures_name = $pictures_name;
     }
 
+    /**
+     * @return bool
+     */
     public function insert(): bool
     {
         $pdo = Database::connect();
@@ -61,7 +53,12 @@ class Slider
         return $result;
     }
 
-    public static function get($id_slider):object
+    /**
+     * @param mixed $id_slider
+     * 
+     * @return object
+     */
+    public static function get($id_slider): object
     {
         $pdo = Database::connect();
         $sql = 'SELECT * FROM `slider` WHERE `id_slider` = :id_slider';
@@ -71,13 +68,18 @@ class Slider
         $result = $stmt->fetchAll();
         return $result;
     }
+    /**
+     * @param int $id_slider
+     * 
+     * @return bool
+     */
     public static function delete(int $id_slider): bool
-{
-    $pdo = Database::connect();
-    $sql = 'DELETE FROM `slider` WHERE `id_slider` = :id_slider';
-    $stmt = $pdo->prepare($sql);
-    $stmt->bindValue(':id_slider', $id_slider, PDO::PARAM_INT);
-    $stmt->execute();
-    return (bool)$stmt->rowCount();
-}
+    {
+        $pdo = Database::connect();
+        $sql = 'DELETE FROM `slider` WHERE `id_slider` = :id_slider';
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindValue(':id_slider', $id_slider, PDO::PARAM_INT);
+        $stmt->execute();
+        return (bool)$stmt->rowCount();
+    }
 }

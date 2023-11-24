@@ -10,6 +10,9 @@ class Cocktail
     private string $stages;
     private int $id_users;
 
+    /**
+     * @return int
+     */
     public function get_id_cocktail(): int
     {
         return $this->id_cocktail;
@@ -19,6 +22,9 @@ class Cocktail
         $this->id_cocktail = $id_cocktail;
     }
 
+    /**
+     * @return string
+     */
     public function get_pictures_name(): string
     {
         return $this->pictures_name;
@@ -28,6 +34,9 @@ class Cocktail
         $this->pictures_name = $pictures_name;
     }
 
+    /**
+     * @return string
+     */
     public function get_name(): string
     {
         return $this->name;
@@ -37,6 +46,9 @@ class Cocktail
         $this->name = $name;
     }
 
+    /**
+     * @return int
+     */
     public function get_id_users(): int
     {
         return $this->id_users;
@@ -46,6 +58,9 @@ class Cocktail
         $this->id_users = $id_users;
     }
 
+    /**
+     * @return string
+     */
     public function get_ingredients(): string
     {
         return $this->ingredients;
@@ -55,6 +70,9 @@ class Cocktail
         $this->ingredients = $ingredients;
     }
 
+    /**
+     * @return string
+     */
     public function get_stages(): string
     {
         return $this->stages;
@@ -64,6 +82,9 @@ class Cocktail
         $this->stages = $stages;
     }
 
+    /**
+     * @return bool
+     */
     public function insert(): bool
     {
         $pdo = Database::connect();
@@ -77,6 +98,9 @@ class Cocktail
         return $result;
     }
 
+    /**
+     * @return array
+     */
     public static function getAll(): array
     {
         $pdo = Database::connect();
@@ -87,6 +111,11 @@ class Cocktail
         return $cocktail;
     }
 
+    /**
+     * @param int $id_cocktail
+     * 
+     * @return bool
+     */
     public static function archived(int $id_cocktail): bool
     {
         $pdo = Database::connect();
@@ -105,34 +134,11 @@ class Cocktail
         }
     }
 
-    public static function moveCocktailToArchives(): array
-    {
-        $pdo = Database::connect();
-        $sql = 'SELECT * FROM `cocktail` 
-        WHERE `cocktail`.`deleted_at` IS NOT NULL;';
-        $stmt = $pdo->query($sql);
-        $archivedcocktail = $stmt->fetchAll(PDO::FETCH_OBJ);
-        return $archivedcocktail;
-    }
 
-    public static function restor(int $id_cocktail): bool
-    {
-        $pdo = Database::connect();
-        // requête SQL pour mettre à jour la colonne created_at
-        $sql = 'UPDATE `cocktail` SET `deleted_at` = NULL WHERE `id_cocktail` = :id_cocktail;';
-        $stmt = $pdo->prepare($sql);
-        // Binder la valeur à la requête
-        $stmt->bindValue(':id_cocktail', $id_cocktail, PDO::PARAM_INT);
-        // Exécuter la requête SQL
-        $result = $stmt->execute();
-        // Retourner un booléen indiquant le succès (true) ou l'échec (false) de la mise à jour
-        $rowCount = $stmt->rowCount();
-        if ($rowCount > 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+
+    /**
+     * @return bool
+     */
     public  function update(): bool
     {
         // Création d'une variable recevant un objet issu de la classe PDO 
@@ -150,11 +156,11 @@ class Cocktail
         $sth = $pdo->prepare($sql);
 
         // Affectation de la valeur correspondant au marqueur nominatif concerné
-        $sth->bindValue(':pictures_name', $this->get_pictures_name(),PDO::PARAM_STR);
-        $sth->bindValue(':name', $this->get_name(),PDO::PARAM_STR);
-        $sth->bindValue(':ingredients', $this->get_ingredients(),PDO::PARAM_STR);
-        $sth->bindValue(':stages', $this->get_stages(),PDO::PARAM_STR);
-        $sth->bindValue(':id_cocktail', $this->get_id_cocktail(),PDO::PARAM_STR);
+        $sth->bindValue(':pictures_name', $this->get_pictures_name(), PDO::PARAM_STR);
+        $sth->bindValue(':name', $this->get_name(), PDO::PARAM_STR);
+        $sth->bindValue(':ingredients', $this->get_ingredients(), PDO::PARAM_STR);
+        $sth->bindValue(':stages', $this->get_stages(), PDO::PARAM_STR);
+        $sth->bindValue(':id_cocktail', $this->get_id_cocktail(), PDO::PARAM_STR);
 
         // Appel aà la méthode rowCount permettant de savoir combien d'enregistrements ont été affectés
         // par la dernière requête (fonctionnel uniquement sur insert, update, ou delete. PAS SUR SELECT!!)
@@ -168,6 +174,11 @@ class Cocktail
     }
 
 
+    /**
+     * @param int $id_cocktail
+     * 
+     * @return bool
+     */
     public static function delete(int $id_cocktail): bool
     {
         $pdo = Database::connect();
@@ -180,6 +191,11 @@ class Cocktail
         return (bool)$stmt->rowCount();
     }
 
+    /**
+     * @param int $id
+     * 
+     * @return object
+     */
     public static function get(int $id): object|false
     {
         $pdo = Database::connect();

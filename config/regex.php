@@ -15,3 +15,4 @@ define('NAME_REGEX',"^[a-zA-Z0-9 \_-éèêëîïôöùûüàäâá]+$");
 define('PICNAME_REGEX',"^[a-zA-Z0-9\-_]+$");
 define('TITLE_REGEX',"^[a-zA-Z0-9 \-éèêëîïôöùûüàäâá]+$");
 define('INGREDIENTS_REGEX',"^[a-zA-Z0-9 \,;-.!?éèêëîïôöùûüàäâá]+$");
+define('PASSWORD_REGEX',"^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){14,30}$");

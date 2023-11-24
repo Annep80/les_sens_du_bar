@@ -1,35 +1,37 @@
 <?php
+// Inclure la classe User_register
 require_once __DIR__ . '/../models/User_register.php';
-
+// Démarrer la session
 session_start();  // Start the session
 
 try {
-    // Check if the user is logged in
+    // Vérifier si l'utilisateur est connecté
     if (!isset($_SESSION['users_register']['id_users'])) {
-        // User is not logged in, redirect to the login page
+        // L'utilisateur n'est pas connecté, rediriger vers la page de connexion
         header('Location: /../controllers/signIn-ctrl.php');
-        exit;  // Ensure that no further code is executed after the redirect
+        exit;
     } else {
-        // User is logged in, retrieve user data
+        // L'utilisateur est connecté, récupérer les données de l'utilisateur
         $id_users = $_SESSION['users_register']['id_users'];
         $userArray = User_register::get($id_users);
-
+        // Récupérer les paramètres d'URL
         $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_SPECIAL_CHARS);
         $update = filter_input(INPUT_GET, 'update', FILTER_SANITIZE_SPECIAL_CHARS);
     }
 } catch (Throwable $th) {
     $error = $th->getMessage();
-    // Log the error or display an error message to the user
+    // Enregistrer l'erreur ou afficher un message d'erreur à l'utilisateur
 }
-
+// Inclure le fichier d'en-tête
 include __DIR__ . '/../views/templates/header.php';
 
-// Check if user is logged in (added check to avoid displaying content if redirecting)
+// Vérifier si l'utilisateur est connecté (ajout d'une vérification pour éviter d'afficher du contenu lors de la redirection)
 if (isset($_SESSION['users_register']['id_users'])) {
+    // Inclure le contenu de l'espace utilisateur
     include __DIR__ . '/../views/user_space.php';
 } else {
-    // User is not logged in, so include login form or relevant content
+    // L'utilisateur n'est pas connecté, donc inclure le formulaire de connexion ou le contenu pertinent
     include __DIR__ . '/../views/login_form.php';
 }
-
+// Inclure le fichier de pied de page
 include __DIR__ . '/../views/templates/footer.php';

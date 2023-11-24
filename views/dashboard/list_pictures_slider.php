@@ -21,9 +21,9 @@
 
                     <?php foreach ($sliderPictures as $sliderPicture) { ?>
                         <tr>
-                            <td class="col-md-5 bg-transparent text-white"><?= $sliderPicture->pictures_name ?></td>
-                            <td class="bg-transparent text-white img-fluid"><img class="col-md-2" src="/public/uploads/slider/<?= $sliderPicture->pictures_name ?>" alt=""></td>
-                            <td class="col-md-2"><a class="deleteBtn btn " href="/controllers/dashboard/delete_slider_picture_ctrl.php?action=delete&id_slider=<?= $sliderPicture->id_slider ?>"><img src="/public/assets/img/corbeille.png" alt="boutton supprimer"></a></td>
+                            <td class="col-md-5 bg-transparent text-white"><div class="d-flex justify-content-center "><?= $sliderPicture->pictures_name ?></div></td>
+                            <td class="bg-transparent text-white img-fluid"><div class="d-flex justify-content-center "><img class="col-md-2" src="/public/uploads/slider/<?= $sliderPicture->pictures_name ?>" alt=""></div></td>
+                            <td class="col-md-2"><div class="d-flex justify-content-center "><a class="deleteBtn btn " href="/controllers/dashboard/delete_slider_picture_ctrl.php?action=delete&id_slider=<?= $sliderPicture->id_slider ?>"><img src="/public/assets/img/corbeille.png" alt="boutton supprimer"></a></div></td>
                         </tr><?php } ?>
                 </tbody>
             </table>

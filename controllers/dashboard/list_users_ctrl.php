@@ -1,6 +1,6 @@
 <?php
 // Inclure les fichiers nécessaires
-require_once __DIR__ . '/../../models/SliderPictures.php';
+require_once __DIR__ . '/../../models/User_register.php';
 
 // Démarrer la session
 session_start();
@@ -12,7 +12,7 @@ if ($_SESSION['users_register']['id_roles'] != 1) {
 }
 try {
     // Récupérer la liste de toutes les images du slider
-    $sliderPictures = Slider::getAll();
+    $users = User_register::getAll();
 } catch (\Throwable $th) {
     // Gérer les erreurs
     $error = $th->getMessage();
@@ -25,5 +25,5 @@ try {
 
 
 include __DIR__ . '/../../views/dashboard/templates/dashboard_header.php';
-include __DIR__ . '/../../views/dashboard/list_pictures_slider.php';
+include __DIR__ . '/../../views/dashboard/list_users.php';
 include __DIR__ . '/../../views/templates/footer.php';

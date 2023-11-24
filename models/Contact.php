@@ -13,6 +13,9 @@ class Contact
 
 
 
+    /**
+     * @return int
+     */
     public function get_id_contact(): int
     {
         return $this->id_contact;
@@ -22,6 +25,9 @@ class Contact
         $this->id_contact = $id_contact;
     }
 
+    /**
+     * @return string
+     */
     public function get_firstname(): string
     {
         return $this->firstname;
@@ -31,6 +37,9 @@ class Contact
         $this->firstname = $firstname;
     }
 
+    /**
+     * @return string
+     */
     public function get_lastname(): string
     {
         return $this->lastname;
@@ -40,6 +49,9 @@ class Contact
         $this->lastname = $lastname;
     }
 
+    /**
+     * @return string
+     */
     public function get_phone(): string
     {
         return $this->phone;
@@ -49,6 +61,9 @@ class Contact
         $this->phone = $phone;
     }
 
+    /**
+     * @return string
+     */
     public function get_email(): string
     {
         return $this->email;
@@ -58,6 +73,9 @@ class Contact
         $this->email = $email;
     }
 
+    /**
+     * @return string
+     */
     public function get_message(): string
     {
         return $this->message;
@@ -68,6 +86,9 @@ class Contact
     }
 
 
+    /**
+     * @return bool
+     */
     public function insert(): bool
     {
         $pdo = Database::connect();
@@ -82,6 +103,9 @@ class Contact
         return $result;
     }
 
+    /**
+     * @return array
+     */
     public static function getAll(): array
     {
         $pdo = Database::connect();

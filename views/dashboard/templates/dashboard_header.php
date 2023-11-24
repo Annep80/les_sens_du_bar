@@ -19,13 +19,19 @@
 <body>
     <header>
         <nav class="navbar navbar-dark  sticky-top">
-            <div class="container-fluid">
-                <div class="row nav justify-content-evenly">
-                    <a class="col-md-2 col-7" href="/controllers/home-ctrl.php"><img src="/public/assets/img/logo_les_sens_du_bar.png" alt="logo les sens du bar"></a>
-                    <!-- <h1 class="title_navbar col-7">Les sens du bar</h1> -->
-                    <button class="navbar-toggler col-md-2 col-10 border border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-                        <img src="/public/assets/img/menu-hamburger.png" alt="menu hamburger">
-                    </button>
+            <div class="w-100">
+                <div class="row nav align-items-center justify-content-between">
+                    
+                    <div class="col-12 col-md-2 d-flex align-items-center justify-content-center">
+                        <a href="/controllers/home-ctrl.php">
+                            <img src="/public/assets/img/logo_les_sens_du_bar.png" alt="logo les sens du bar">
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-1 d-flex align-items-center justify-content-center">
+                        <button class="navbar-toggler border-0 " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                            <img  class="ms-4" src="/public/assets/img/icons8-menu-30.png"  alt="menu hamburger">
+                        </button>
+                    </div>
                 </div>
                 <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                     <div class="offcanvas-header">
@@ -59,6 +65,12 @@
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="/controllers/dashboard/list_contact_ctrl.php">Liste des demandes</a>
+                            </li>
+                        </ul>
+                        <h5 class="mt-5">Utilisateurs</h5>
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/controllers/dashboard/list_users_ctrl.php">Liste des utilisateurs</a>
                             </li>
                         </ul>
                     </div>

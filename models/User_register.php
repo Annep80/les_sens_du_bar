@@ -17,6 +17,9 @@ class User_register
     private int $id_roles;
 
 
+    /**
+     * @return int
+     */
     public function get_id_users(): int
     {
         return $this->id_users;
@@ -27,6 +30,9 @@ class User_register
         $this->id_users = $id_users;
     }
 
+    /**
+     * @return string
+     */
     public function get_firstname(): string
     {
         return $this->firstname;
@@ -36,6 +42,9 @@ class User_register
         $this->firstname = $firstname;
     }
 
+    /**
+     * @return string
+     */
     public function get_lastname(): string
     {
         return $this->lastname;
@@ -45,6 +54,9 @@ class User_register
         $this->lastname = $lastname;
     }
 
+    /**
+     * @return DateTime
+     */
     public function get_birthday(): DateTime
     {
         return $this->birthday;
@@ -55,6 +67,9 @@ class User_register
     }
 
 
+    /**
+     * @return string
+     */
     public function get_phone(): string
     {
         return $this->phone;
@@ -64,6 +79,9 @@ class User_register
         $this->phone = $phone;
     }
 
+    /**
+     * @return string
+     */
     public function get_address(): string
     {
         return $this->address;
@@ -73,6 +91,9 @@ class User_register
         $this->address = $address;
     }
 
+    /**
+     * @return string
+     */
     public function get_zipcode(): string
     {
         return $this->zipcode;
@@ -82,6 +103,9 @@ class User_register
         $this->zipcode = $zipcode;
     }
 
+    /**
+     * @return string
+     */
     public function get_city(): string
     {
         return $this->city;
@@ -91,6 +115,9 @@ class User_register
         $this->city = $city;
     }
 
+    /**
+     * @return string
+     */
     public function get_mail(): string
     {
         return $this->mail;
@@ -100,6 +127,9 @@ class User_register
         $this->mail = $mail;
     }
 
+    /**
+     * @return string
+     */
     public function get_password(): string
     {
         return $this->password;
@@ -109,6 +139,9 @@ class User_register
         $this->password = $password;
     }
 
+    /**
+     * @return string
+     */
     public function get_confirm(): string
     {
         return $this->confirm;
@@ -118,6 +151,9 @@ class User_register
         $this->confirm = $confirm;
     }
 
+    /**
+     * @return int
+     */
     public function get_id_roles(): int
     {
         return $this->id_roles;
@@ -127,6 +163,9 @@ class User_register
         $this->id_roles = $id_roles;
     }
 
+    /**
+     * @return bool
+     */
     public function insert(): bool
     {
         $pdo = Database::connect();
@@ -148,6 +187,9 @@ class User_register
         return (int) $lastInsertedID;
     }
 
+    /**
+     * @return [type]
+     */
     public static function getAll()
     {
         $pdo = Database::connect();
@@ -157,6 +199,11 @@ class User_register
         return $result;
     }
 
+    /**
+     * @param mixed $mail
+     * 
+     * @return [type]
+     */
     public static function get_userByEmail($mail)
     {
         $pdo = Database::connect();
@@ -171,6 +218,11 @@ class User_register
         return $user;
     }
 
+    /**
+     * @param mixed $id_users
+     * 
+     * @return [type]
+     */
     public static function get($id_users)
     {
         $pdo = Database::connect();
@@ -182,7 +234,10 @@ class User_register
         return $user;
     }
 
-    public function update():bool
+    /**
+     * @return bool
+     */
+    public function update(): bool
     {
         $pdo = Database::connect();
         $sql = 'UPDATE `users_register` SET 
