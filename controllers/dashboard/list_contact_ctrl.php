@@ -4,6 +4,7 @@ require_once __DIR__ . ('/../../helpers/FlashMessage.php');
 require_once __DIR__ . ('/../../config/const.php');
 
 
+
 // Inclure les fichiers nécessaires
 session_start();
 // Vérifier si l'utilisateur a le rôle requis (rôle avec l'identifiant 1) pour accéder

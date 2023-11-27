@@ -2,6 +2,7 @@
 // Inclure les fichiers nécessaires
 require_once __DIR__ . '/../../models/SliderPictures.php';
 
+
 // Démarrer la session
 session_start();
 

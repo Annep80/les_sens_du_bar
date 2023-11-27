@@ -4,6 +4,7 @@ require_once __DIR__ . ('/../../models/SliderPictures.php');
 require_once __DIR__ . ('/../../config/const.php');
 require_once __DIR__ . ('/../../config/regex.php');
 
+
 // Démarrer la session
 session_start();
 

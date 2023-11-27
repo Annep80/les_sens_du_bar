@@ -3,7 +3,8 @@
 require_once __DIR__ . '/../models/User_register.php';
 // Démarrer la session
 session_start();  // Start the session
-
+$title = 'Les sens du bar - Mon compte';
+$metaDescription = 'Les sens du bar est un service de barman itinérant. Contactez-nous pour obtenir plus de renseignements.';
 try {
     // Vérifier si l'utilisateur est connecté
     if (!isset($_SESSION['users_register']['id_users'])) {

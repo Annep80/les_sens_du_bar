@@ -3,6 +3,7 @@
 require_once __DIR__ . '/../../config/regex.php';
 require_once __DIR__ . '/../../models/Cocktail.php';
 
+
 // Démarrer la session
 session_start();
 // Vérifier si l'utilisateur a le rôle requis (rôle avec l'identifiant 1) pour accéder
